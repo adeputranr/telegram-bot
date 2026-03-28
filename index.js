@@ -24,10 +24,19 @@ const users = {};
 // ==============================
 bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id,
-`🔥 VIP Mas Ade 🔥
-Harga: 100K
+`🔥 VIP MAS ADE 🔥
 
-Klik tombol di bawah untuk lanjut:`,
+━━━━━━━━━━━━━━━
+
+💎 Akses eksklusif
+🔒 Konten private
+🚀 Update rutin
+
+💰 Harga: 100K
+
+━━━━━━━━━━━━━━━
+
+Klik tombol di bawah 👇`,
   {
     reply_markup: {
       inline_keyboard: [

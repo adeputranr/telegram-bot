@@ -69,7 +69,8 @@ Isi pesan saat donasi dengan kode berikut:
 
 ${orderId}
 
-⚠️ Nominal harus MINIMAL 100.000`
+⚠️ Nominal harus MINIMAL 100.000
+📌 Pastikan isi kode dengan benar ya`
   );
 });
 
@@ -95,10 +96,11 @@ app.post('/webhook', async (req, res) => {
     if (amount < 100000) {
       await bot.sendMessage(
         telegram_id,
-        `❌ Pembayaran kamu kurang dari 100K
+        `❌ PEMBAYARAN GAGAL
 
-Silakan ulangi pembayaran sesuai nominal:
-100.000`
+Nominal kurang dari 100.000
+
+Silakan chat @mas_adeee`
       );
       return res.sendStatus(200);
     }
@@ -110,10 +112,14 @@ Silakan ulangi pembayaran sesuai nominal:
 
     await bot.sendMessage(
       telegram_id,
-      `✅ Pembayaran berhasil!
+      `✅ PEMBAYARAN BERHASIL!
 
-Ini link VIP kamu:
-${invite.invite_link}`
+Selamat 🎉 kamu sudah jadi member VIP
+
+Klik link di bawah untuk join:
+${invite.invite_link}
+
+⚠️ Link hanya berlaku 1x`
     );
 
     delete users[orderId];

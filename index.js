@@ -8,7 +8,7 @@ app.use(express.json());
 // CONFIG
 // ==============================
 const token = "8177406788:AAFO7SpjNM1DYeSzMgpXbulZGNvqSrNG-5c";
-const GROUP_ID = "-1003773056558";
+const GROUP_ID = "-1003045792480";
 
 // ==============================
 // INIT BOT
